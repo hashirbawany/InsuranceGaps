@@ -10,7 +10,9 @@ pd.set_option('display.float_format', lambda x: f'{x:.6f}')
 
 
 #Loading & cleaning
-risk = gpd.read_file(r"C:\Users\hashi\OneDrive - Higher Education Commission\Desktop\Uchicago Classes\Quarter 4\GIS\Final Project\NRI_Shapefile_CensusTracts\NRI_Shapefile_CensusTracts.shp")
+risk = gpd.read_file(
+    "../data/rawdata/NRI_Shapefile_CensusTracts/NRI_Shapefile_CensusTracts.shp"
+)
 
 keep_cols = [
     "TRACTFIPS", "COUNTYFIPS", "STATEFIPS", "NRI_ID",
@@ -106,5 +108,14 @@ sum(risk_flood_1_harris['total_loss_higher'])
 
 
 #Exporting
-risk_flood_1_harris.to_csv("risk_data_harris.csv", index=False)
-risk_flood_1.to_csv("risk_data_full.csv", index=False)
+risk_flood_1_harris.to_csv(
+    "../data/processed_data/risk_data_harris.csv",
+    index=False
+)
+
+risk_flood_1.to_csv(
+    "../data/processed_data/risk_data_full.csv",
+    index=False
+)
+
+
