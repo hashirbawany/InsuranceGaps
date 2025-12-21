@@ -24,13 +24,16 @@ import pandas as pd
 
 # insurance_data = test.reset_index(drop=True)    
 
-# insurance_data.to_csv("insurance_data.csv", index=False)
+# insurance_data.to_csv("../data/processed_data/insurance_data.csv", index=False)
 
 
 
 # Loading downloaded data and exploring
-insurance_data = pd.read_csv("insurance_data.csv" ,
-dtype={"censustract": str})
+insurance_data = pd.read_csv(
+    "../data/processed_data/insurance_data.csv",
+    dtype={"censustract": str}
+)
+
 
 insurance_data.head()
 
@@ -57,4 +60,6 @@ insurance_census = insurance_census.reset_index()
 
 
 #exporting to csv
-insurance_census.to_csv("insurance_census.csv", index=False)
+insurance_census.to_csv("../data/processed_data/insurance_census.csv", index=False)
+
+
