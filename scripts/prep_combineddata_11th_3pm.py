@@ -12,15 +12,18 @@ pd.set_option('display.float_format', lambda x: f'{x:.6f}')
 
 #loading and merging all files
 risk_data = pd.read_csv(
-    "risk_data_harris.csv",
-    dtype={"TRACTFIPS": str})
+    "../data/processed_data/risk_data_harris.csv",
+    dtype={"TRACTFIPS": str}
+)
 
 insurance_data = insurance_census = pd.read_csv(
-    "insurance_census.csv",
+    "../data/processed_data/insurance_census.csv",
     dtype={"censustract": str}
 )
 
-acs_data = pd.read_csv("final_acs.csv")
+acs_data = pd.read_csv(
+    "../data/processed_data/final_acs.csv"
+)
 
 #checking both are unique on census level
 assert risk_data['TRACTFIPS'].is_unique, "Column contains duplicate values!"
@@ -97,4 +100,5 @@ len(combined_map)
 
 
 combined_map.to_file("harris_underinsurance.shp")
+
 
