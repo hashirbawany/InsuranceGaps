@@ -8,13 +8,14 @@ pd.set_option('display.float_format', lambda x: f'{x:.6f}')
 
 
 #Importing  all ACS variants
-acs4  = pd.read_csv("ACS data/nhgis0004_ds267_20235_tract.csv")
-acs5  = pd.read_csv("ACS data/nhgis0005_ds267_20235_tract.csv")
-acs6  = pd.read_csv("ACS data/nhgis0006_ds267_20235_tract.csv")
-acs7  = pd.read_csv("ACS data/nhgis0007_ds267_20235_tract.csv")
-acs8  = pd.read_csv("ACS data/nhgis0008_ds267_20235_tract.csv")
-acs10 = pd.read_csv("ACS data/nhgis0010_ds267_20235_tract.csv")
-acs11 = pd.read_csv("ACS data/nhgis0011_ds267_20235_tract.csv")
+acs4  = pd.read_csv("../data/rawdata/acs/nhgis0004_ds267_20235_tract.csv")
+acs5  = pd.read_csv("../data/rawdata/acs/nhgis0005_ds267_20235_tract.csv")
+acs6  = pd.read_csv("../data/rawdata/acs/nhgis0006_ds267_20235_tract.csv")
+acs7  = pd.read_csv("../data/rawdata/acs/nhgis0007_ds267_20235_tract.csv")
+acs8  = pd.read_csv("../data/rawdata/acs/nhgis0008_ds267_20235_tract.csv")
+acs10 = pd.read_csv("../data/rawdata/acs/nhgis0010_ds267_20235_tract.csv")
+acs11 = pd.read_csv("../data/rawdata/acs/nhgis0011_ds267_20235_tract.csv")
+
 
 
 
@@ -119,4 +120,5 @@ final_acs = (
 
 
 #saving data
-final_acs.to_csv("final_acs.csv", index=False)
+final_acs.to_csv("../data/processed_data/final_acs.csv", index=False)
+
