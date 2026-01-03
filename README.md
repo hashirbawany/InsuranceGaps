@@ -22,9 +22,8 @@ Whats the corelation between insurance gap and demographics of a census tract?
 ## Methodology & tools 
 
 
-$$
-\mathbb{E}[D \mid F] = \frac{\mathbb{E}[D]}{\mathbb{P}(F)}
-$$
+Expected damage conditional on flood occurrence is defined as 
+$\mathbb{E}[D \mid F] = \mathbb{E}[D] / \mathbb{P}(F)$.
 
 - Expected damages was calculated by multipl
 
