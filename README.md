@@ -20,16 +20,24 @@ Whats the corelation between insurance gap and demographics of a census tract?
 ---
 
 ## Methodology & tools 
+- Expected loss was calculated as
+$$
+\mathbb{E}[L] = \mathbb{P}(F)\,\theta\,V,
+$$
 
+where $\mathbb{E}[L]$ denotes expected loss, $\mathbb{P}(F)$ is the probability of a flood,
+$\theta$ is the historical damage ratio conditional on flooding, and $V$ is the building value.
 
-Expected damage conditional on flood occurrence is defined as 
-$\mathbb{E}[D \mid F] = \mathbb{E}[D] / \mathbb{P}(F)$.
-
-- Expected damages was calculated by multipl
-
-
-
-The NFIP dataset contained approximately 80 million policy records and could not be processed directly in memory. To handle this scale, the raw data were imported into a relational database using pgAdmin and filtered using Structured Query Language to isolate Harris County records and relevant variables. The resulting subset was then loaded into Python, aggregated to the census tract level, and then merged with ACS and NRI datasets. The merged dataset was saved as a shapefile and  later used as an input in the automated GIS Script. 
+- Designed a relational database schema in PostgreSQL to efficiently query data from NFIP dataset which contained 80million + observations
+- Used postgre sql API to send queries directly from python interface
+-
+- Grouped policy level dataset at the census level to get an estimate for total assets insured against floods
+- Recasted variables, analyzed NA values, removed outliers , coded categorical data, and merged all datasets together
+- Generated choropleth maps in ArcGIS to visualize the distribution of underinsured census tracts accross harris county
+- Used arcpy API to control map generation process in ArcGIS directly from python and enhance reprodcibailoty
+- 
+- 
+  
 
 ---
 
