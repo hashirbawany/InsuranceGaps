@@ -1,6 +1,6 @@
-# Flood Risk and Insurance Gap Mapping
+# Overview 
 
-Automated geospatial analysis of insurance coverage gaps using census tract level data.
+This project analyzes insurance coverage gaps across census tracts in Harris County, Texas.
 
 ---
 
