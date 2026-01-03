@@ -20,11 +20,7 @@ Whats the corelation between insurance gap and demographics of a census tract?
 ---
 
 ## Methodology & tools 
-- Expected loss was calculated as
-
-$$
-\mathbb{E}[L] = \mathbb{P}(F)\,\theta\,V,
-$$
+- Expected loss was calculated as $\mathbb{E}[L] = \mathbb{P}(F)\,\theta\,V,$
 
 where $\mathbb{E}[L]$ denotes expected loss, $\mathbb{P}(F)$ is the probability of a flood,
 $\theta$ is the historical damage ratio conditional on flooding, and $V$ is the building value.
